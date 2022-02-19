@@ -1,0 +1,29 @@
+{
+  "model_params": {
+    "model": "curie:ft-umass-nlp-2022-02-01-16-38-55",
+    "max_tokens": "150",
+    "stop": " <EOS>",
+    "logprobs": "1"
+  },
+  "acro_dict":{
+    "mrh": "main rotor head",
+    "nlg": "nose landing gear",
+    "tr": "tail rotor",
+    "aff": "area fod free",
+    "hyd": "hydraulic",
+    "oz": "ounces",
+    "r&r": "removed and replaced",
+    "mlg": "main landing gear",
+    "lh": "left hand",
+    "rh": "right hand",
+    "quad": "quadrant",
+    "tq": "torque",
+    "lgcu": "landing gear control unit",
+    "150-300": "num_main",
+    "3240": "main_num"
+  },
+  "rev_dict":{
+    "num_main":"150-300",
+    "main_num": "3240"
+  }
+}
