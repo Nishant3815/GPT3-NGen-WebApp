@@ -12,6 +12,10 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 
 RUN conda create -y -n nga_scratch python=3.7
 
+
+COPY openai.cfg  src/openai.cfg
+
+RUN export OPENAI_CONFIG=src/openai.cfg
 #WORKDIR /app
 
 #COPY . /app
