@@ -7,8 +7,13 @@ KEY_NAME = "OPENAI_KEY"
 
 
 app = Flask(__name__)
-app.config.from_envvar(CONFIG_VAR)
-set_openai_key(app.config[KEY_NAME])
+#app.config.from_envvar(CONFIG_VAR)
+#set_openai_key(app.config[KEY_NAME])
+
+try:
+    openai.api_key= <GPT-3-KEY-HERE>
+except:
+    print("Please Enter Secret acceess key from GPT-3 API")
 
 def convert_gpt3_input_format(prompt):
     """
@@ -49,4 +54,4 @@ def post_input():
 def home():
     return render_template('gpt3.html')
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=9090)
+    app.run(debug=True, host='0.0.0.0', port=8100)
