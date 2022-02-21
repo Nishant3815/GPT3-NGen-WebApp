@@ -54,4 +54,6 @@ def post_input():
 def home():
     return render_template('gpt3.html')
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8100)
+    from os import environ
+    app.run(debug=True, host='0.0.0.0', port = int(os.environ.get("PORT", 8100))
+)

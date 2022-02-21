@@ -31,7 +31,7 @@ EXPOSE 8100
 
 #ENTRYPOINT ["python3"]
 
-#CMD ['./src/app.py']
+CMD ["./src/setrun.sh"]
 	
 
 
