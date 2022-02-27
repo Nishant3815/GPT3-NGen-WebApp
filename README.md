@@ -21,6 +21,9 @@ GPT-3 powered Web Application for generating corrective action. WebApp uses a fi
 # Running app via Docker container (with config file): Present Working Version
 1. Clone the repo and place file named `openai.config`in nga folder. It should contain one line of config information in format: `OPENAI_KEY= '<KEY>' `
 2. Move to the nga folder where Dockerfile is present for this project (nga folder)
-3. Build docker using command: `docker build -f Dockerfile -t app_nga_2:latest .`
-4. Run `docker run -p 8100:8100 -ti app_nga_conf /bin/bash -c "cd src && export OPENAI_CONFIG=openai.cfg && source activate nga_scratch && python api.py"` 
+3. Build docker using command: `docker build -f Dockerfile -t app_nga_3:latest .`
+4. Run `docker run -p 8100:8100 -ti app_nga_3` 
 5. If using linux, use link to directly navigate to the app, else use Docker App to launch the web-interface
+
+# Heroku Deployed App GIF
+![app](nga/app_working.gif)
