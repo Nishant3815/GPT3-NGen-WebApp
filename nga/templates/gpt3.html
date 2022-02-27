@@ -68,6 +68,26 @@
 					$(".ctext").append(html);
 				});
 	};
+
+
+	function corrective_action_example(selectValue) {
+	var text= selectValue.value;
+	  $.ajax({
+				  url: "/processed",
+				  type: "POST",
+				  data: {text:text}
+			  }).done(function(response) {
+				var html= "";
+				response =response.result;
+					 $.each(response,function(key,val){
+					 console.log(val);
+						html+="<b>Suggested Corrective Action: </b>"+val
+					});
+					html +="";
+					$(".ctext").append(html);
+				});
+	};
+
 	</script>
 	</head>
 	<body>
@@ -146,8 +166,21 @@
 					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 						<p class="fh5co-lead">
 							<i style="font-size: small;">Enter Issue from the Naval Database: </i> <br>
-							<input type="text" id="corrective_text" style="height:200px; font-size:14pt;width: 50%;">
+							<input type="text" id="corrective_text" placeholder= "Enter an issue or select from the dropdown options" style="height:100px; font-size:14pt;width: 50%;">
 							<button id="text_sum_clicked" onclick="corrective_action()" class="btn btn-primary btn-outline">Submit</button>
+						</p>
+						<p>
+							<form action="" method="">
+								<label for=""> <i style="font-size: small;"> Example Issues for Selection: </i> </label>
+								<select name="" id="" onchange="corrective_action_example(this)">
+								    <option value="Select from options"> Select from options </option>
+									<option value="mrh aft scissors has side to side play"> mrh aft scissors has side to side play </option>
+									<option value="right and left nose landing gear tires require pressure"> right and left nose landing gear tires require pressure </option>
+									<option value="mrh accumulator low"> mrh accumulator low </option>
+									<option value="fold hinge gear bearing cracked"> fold hinge gear bearing cracked </option>
+									<option value="both c-box mounting bolts not tq striped "> both c-box mounting bolts not tq striped  </option>
+								</select>
+							</form>
 						</p>
 						<p class="ctext">
 						</p>
