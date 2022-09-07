@@ -62,14 +62,14 @@
 				response =response.result;
 					 $.each(response,function(key,val){
 					 console.log(val);
-						html +="<b> Suggested Corrective Action: </b>"+val
+						html+="<b>Suggested Corrective Action: </b>"+val
 					});
-					html +="  ";
-					$(".ctext").empty();
+					html +="";
 					$(".ctext").append(html);
 				});
 	};
-	
+
+
 	function corrective_action_example(selectValue) {
 	var text= selectValue.value;
 	  $.ajax({
@@ -81,13 +81,13 @@
 				response =response.result;
 					 $.each(response,function(key,val){
 					 console.log(val);
-						html +="<b> Suggested Corrective Action: </b>"+val
+						html+="<b>Suggested Corrective Action: </b>"+val
 					});
-					html +="  ";
-					$(".ctext").empty();
+					html +="";
 					$(".ctext").append(html);
 				});
 	};
+
 	</script>
 	</head>
 	<body>
@@ -182,7 +182,7 @@
 								</select>
 							</form>
 						</p>
-						<p class="ctext">
+						<p class="ctext">docker 
 						</p>
 					</div>
 					
